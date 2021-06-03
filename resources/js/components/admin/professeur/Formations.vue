@@ -3,9 +3,17 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
       <!-- Page Heading -->
-      <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-      
-      
+      <p>
+        <span class="gauche"
+          ><i class="fa fa-2x fa-plus-circle" aria-hidden="true"></i></span
+        ><span class="gauche">
+          <h1 class="h3 align left mb-2 text-gray-800">
+            Formations proposées
+          </h1></span
+        >
+      </p>
+
+      <br /><br /><br />
       <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -55,10 +63,7 @@
       </div>
     </div>
     <!-- /.container-fluid -->
-     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+    <!-- Scroll to Top Button-->
   </div>
 </template>
 
@@ -72,4 +77,16 @@ export default {
 </script>
 
 <style scoped>
+p {
+
+  text-align: justify;
+
+}
+
+p span.gauche {
+
+  float: left;
+
+}
+
 </style>
