@@ -1993,8 +1993,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Dashboard",
   mounted: function mounted() {
@@ -38424,18 +38422,6 @@ var staticRenderFns = [
       _c("div", { staticClass: "container-fluid" }, [
         _c("h1", { staticClass: "h3 mb-2 text-gray-800" }, [_vm._v("Tables")]),
         _vm._v(" "),
-        _c("p", { staticClass: "mb-4" }, [
-          _vm._v(
-            "\n      DataTables is a third party plugin that is used to generate the demo\n      table below. For more information about DataTables, please visit the\n      "
-          ),
-          _c(
-            "a",
-            { attrs: { target: "_blank", href: "https://datatables.net" } },
-            [_vm._v("official DataTables documentation")]
-          ),
-          _vm._v(".\n    ")
-        ]),
-        _vm._v(" "),
         _c("div", { staticClass: "card shadow mb-4" }, [
           _c("div", { staticClass: "card-header py-3" }, [
             _c("h6", { staticClass: "m-0 font-weight-bold text-primary" }, [
@@ -38504,7 +38490,13 @@ var staticRenderFns = [
             ])
           ])
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "scroll-to-top rounded", attrs: { href: "#page-top" } },
+        [_c("i", { staticClass: "fas fa-angle-up" })]
+      )
     ])
   }
 ]
