@@ -1998,6 +1998,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Dashboard",
   mounted: function mounted() {
@@ -6710,7 +6715,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\np[data-v-39b18080] {\r\n\r\n  text-align: justify;\n}\np span.gauche[data-v-39b18080] {\r\n\r\n  float: left;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\np[data-v-39b18080] {\r\n  text-align: justify;\n}\np span.gauche[data-v-39b18080] {\r\n  float: left;\n}\n.searchbar[data-v-39b18080]{\r\n    margin-bottom: auto;\r\n    margin-top: auto;\r\n    height: 60px;\r\n    background-color: #353b48;\r\n    border-radius: 30px;\r\n    padding: 10px;\n}\n.search_input[data-v-39b18080]{\r\n    color: white;\r\n    border: 0;\r\n    outline: 0;\r\n    background: none;\r\n    width: 0;\r\n    caret-color:transparent;\r\n    line-height: 40px;\r\n    transition: width 0.4s linear;\n}\n.searchbar:hover > .search_input[data-v-39b18080]{\r\n    padding: 0 10px;\r\n    width: 450px;\r\n    caret-color:red;\r\n    transition: width 0.4s linear;\n}\n.searchbar:hover > .search_icon[data-v-39b18080]{\r\n    background: white;\r\n    color: #e74c3c;\n}\n.search_icon[data-v-39b18080]{\r\n    height: 40px;\r\n    width: 40px;\r\n    float: right;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-radius: 50%;\r\n    color:white;\r\n    text-decoration:none;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38471,13 +38476,26 @@ var staticRenderFns = [
         _c("p", [
           _c("span", { staticClass: "gauche" }, [
             _c("i", {
-              staticClass: "fa fa-2x fa-plus-circle",
+              staticClass: "fa fa-2x fa-plus-circle d-lg-show",
               attrs: { "aria-hidden": "true" }
             })
           ]),
           _c("span", { staticClass: "gauche" }, [
             _c("h1", { staticClass: "h3 align left mb-2 text-gray-800" }, [
               _vm._v("\n          Formations proposées\n        ")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "d-flex justify-content-center h-100" }, [
+          _c("div", { staticClass: "searchbar" }, [
+            _c("input", {
+              staticClass: "search_input",
+              attrs: { type: "text", name: "", placeholder: "Search..." }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "search_icon", attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fas fa-search" })
             ])
           ])
         ]),
