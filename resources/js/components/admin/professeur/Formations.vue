@@ -12,7 +12,8 @@
           </h1></span
         >
       </p>
-      <div class="d-flex justify-content-center h-100">
+      <br><br><br>
+      <div class="d-flex justify-content-center h-70">
         <div class="searchbar">
           <input class="search_input" type="text" name="" placeholder="Search..."/>
           <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
@@ -92,8 +93,8 @@ p span.gauche {
  .searchbar{
     margin-bottom: auto;
     margin-top: auto;
-    height: 60px;
-    background-color: #353b48;
+    height: 40px;
+    background-color: white;
     border-radius: 30px;
     padding: 10px;
     }
@@ -106,20 +107,10 @@ p span.gauche {
     width: 0;
     caret-color:transparent;
     line-height: 40px;
-    transition: width 0.4s linear;
+    
     }
 
-    .searchbar:hover > .search_input{
-    padding: 0 10px;
-    width: 450px;
-    caret-color:red;
-    transition: width 0.4s linear;
-    }
-
-    .searchbar:hover > .search_icon{
-    background: white;
-    color: #e74c3c;
-    }
+   
 
     .search_icon{
     height: 40px;
