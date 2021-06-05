@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/login', [PostController::class , 'showLogin' ])->name('auth.login');
 Route::get('/', [PostController::class , 'index' ])->name('admin.professeur.welcome');
 Route::get('/compte', [PostController::class , 'showCompte' ])->name('admin.professeur.compte');
 Route::get('/formations_proposees', [PostController::class , 'showFormations' ])->name('admin.professeur.formations_proposées.index');

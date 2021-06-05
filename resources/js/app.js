@@ -21,6 +21,7 @@ import Formations from './components/admin/professeur/Formations.vue';
 import Sujets from './components/admin/professeur/Sujets.vue';
 import Participants from './components/admin/professeur/Participants.vue';
 import Candidatures from './components/admin/professeur/Candidatures.vue';
+import Login from './components/auth/Login.vue';
 
 //Vue.component('dashboard', require('./components/Dashboard.vue'));
 
@@ -45,6 +46,6 @@ const router = new VueRouter({routes});
 const app = new Vue({
     el: '#app',
     //router: router,
-    components: {Titre, Dashboard , Compte, Formations, Sujets, Participants, Candidatures},
+    components: {Titre, Dashboard , Compte, Formations, Sujets, Participants, Candidatures, Login},
     
 });

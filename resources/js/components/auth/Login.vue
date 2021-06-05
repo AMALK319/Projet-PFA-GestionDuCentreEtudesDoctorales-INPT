@@ -5,17 +5,17 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6 ">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form " action="" method="post" @submit.prevent="login" @keydown="form.onKeydown($event)">
-                            <AlertError :form="form" />
+                        <form id="login-form" class="form " action="" method="post" >
+                            
                             <h3 class="text-center text-white ">Connexion</h3>
                             <br>
                             <div class="form-group">
                                 <input id="username" v-model="form.username" type="text" name="username" class="form-control" placeholder="Entrer votre login">
-                                <HasError :form="form" field="username" />
+                                
                             </div>
                             <div class="form-group">
                                 <input id="password" v-model="form.password" type="password" name="password" class="form-control" placeholder="Entrer votre mot de passe" >
-                                 <HasError :form="form" field="password" />
+                                 
                             </div>
                             <div  class=" form-group text-right">
                                 <a href="#" class="text-white">Mot de passe oublié?</a>
@@ -34,14 +34,11 @@
 </template>
 
 <script>
-import Form from 'vform'
-import { Button, HasError, AlertError } from 'vform/src/components/bootstrap5'
+
 
 export default {
   name: 'Connexion',
-  components: {
-    Button, HasError, AlertError
-  },
+  
 
   data: () => ({
     form: new Form({
@@ -50,12 +47,7 @@ export default {
     })
   }),
 
-  methods: {
-    async login () {
-      const response = await this.form.post('/api/login')
-      // ...
-    }
-  }
+ 
 }
 </script>
 

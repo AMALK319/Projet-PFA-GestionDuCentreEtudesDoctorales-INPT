@@ -13,12 +13,12 @@ class PostController extends Controller
     public function index()
     {
         $dashboard = 'Acceuil' ;
-        return view('admin.professeur.welcome', ['title1' => $dashboard]);
+        return view('admin.professeur.welcome');
     }
     public function showFormations()
     {
         $formations = 'Formations proposées';
-        return view('admin.professeur.formations_proposées.index' , ['title' => $formations]);
+        return view('admin.professeur.formations_proposées.index');
     }
     public function showParticipants()
     {
@@ -39,5 +39,10 @@ class PostController extends Controller
     {
        
         return view('admin.professeur.compte');
+    }
+    public function showLogin()
+    {
+       
+        return view('auth.login');
     }
 }
