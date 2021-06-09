@@ -8,18 +8,11 @@
           ><i class="fa fa-2x fa-plus-circle d-lg-show" aria-hidden="true"></i></span
         ><span class="gauche">
           <h1 class="h3 align left mb-2 text-gray-800">
-            Formations proposées
+            Formations 
           </h1></span
         >
       </p>
-      <br><br><br>
-      <div class="d-flex justify-content-center h-70">
-        <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search..."/>
-          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-        </div>
-      </div>
-      <br /><br /><br />
+     
       <!-- DataTales Example -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -90,37 +83,5 @@ p {
 p span.gauche {
   float: left;
 }
- .searchbar{
-    margin-bottom: auto;
-    margin-top: auto;
-    height: 40px;
-    background-color: white;
-    border-radius: 30px;
-    padding: 10px;
-    }
-
-    .search_input{
-    color: white;
-    border: 0;
-    outline: 0;
-    background: none;
-    width: 0;
-    caret-color:transparent;
-    line-height: 40px;
-    
-    }
-
-   
-
-    .search_icon{
-    height: 40px;
-    width: 40px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color:white;
-    text-decoration:none;
-    }
+ 
 </style>
