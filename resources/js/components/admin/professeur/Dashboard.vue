@@ -2,6 +2,7 @@
   <div class="content">
     <div class="titre">
       <h1>Acceuil</h1>
+     
     </div>
   </div>
 </template>
