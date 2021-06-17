@@ -3,16 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+   
+use Illuminate\Support\Facades\DB;
+use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
 
 class PostController extends Controller
 {
-   
-   
-  
+ 
 
+                                
+  
+    public function choose()
+    {
+        $user_id=auth()->user()->id;
+        $roles = DB::select('select role_id from users where id= ?;', [$user_id]);
+        return view('admin.choice', compact( 'roles' ) );
+    }
     public function index()
     {
-        $dashboard = 'Acceuil' ;
         return view('admin.professeur.welcome');
     }
     public function showFormations()
@@ -42,7 +51,7 @@ class PostController extends Controller
     }
     public function showLogin()
     {
-       
         return view('auth.login');
+       
     }
 }

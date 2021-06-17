@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
-    
+
     <title>Document</title>
     <style>
         body {
@@ -60,23 +60,31 @@
                 <div id="login-row" class="row justify-content-center align-items-center">
                     <div id="login-column" class="col-md-6 ">
                         <div id="login-box" class="col-md-12">
-                            <form id="login-form" class="form " action="" method="post">
-
+                            <form id="login-form" class="form " method="POST" action="{{ route('login') }}">
+                            @csrf
                                 <h3 class="text-center text-white ">Connexion</h3>
                                 <br>
                                 <div class="form-group">
-                                    <input id="username" v-model="form.username" type="text" name="username" class="form-control" placeholder="Entrer votre login">
-
+                                    <input id="username" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Entrer votre login">
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <input id="password" v-model="form.password" type="password" name="password" class="form-control" placeholder="Entrer votre mot de passe">
-
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  placeholder="Entrer votre mot de passe">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class=" form-group text-right">
                                     <a href="#" class="text-white">Mot de passe oublié?</a>
                                 </div>
                                 <div class="col-md-12 text-center ">
-                                    <Button :form="form" type="submit" class=" btn btn-block mybtn text-white  "> <strong>Se connecter</strong></Button>
+                                    <Button type="submit" class=" btn btn-block mybtn text-white  "> <strong> {{ __('Se connecter') }}</strong></Button>
                                 </div>
                             </form>
 
