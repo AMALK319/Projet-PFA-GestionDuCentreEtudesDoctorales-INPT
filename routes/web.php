@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CandidaturesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PostController::class , 'index' ])->name('admin.professeur.welcome');
-Route::get('/compte', [PostController::class , 'showCompte' ])->name('admin.professeur.compte');
-Route::get('/formations_proposees', [PostController::class , 'showFormations' ])->name('admin.professeur.formations_proposées.index');
-Route::get('/fparticipants', [PostController::class , 'showParticipants' ])->name('admin.professeur.participants.index');
-Route::get('/sujets_proposes', [PostController::class , 'showSujets' ])->name('admin.professeur.sujets_proposés.index');
-Route::get('/candidatures', [PostController::class , 'showCandidatures' ])->name('admin.professeur.candidatures.index');
+Route::group( [],function(){
+    Route::get('/', [PostController::class , 'index' ])->name('admin.professeur.welcome');
+    Route::get('/compte', [PostController::class , 'showCompte' ])->name('admin.professeur.compte');
+    Route::get('/formations_proposees', [PostController::class , 'showFormations' ])->name('admin.professeur.formations_proposées.index');
+    Route::get('/fparticipants', [PostController::class , 'showParticipants' ])->name('admin.professeur.participants.index');
+    Route::get('/sujets_proposes', [PostController::class , 'showSujets' ])->name('admin.professeur.sujets_proposés.index');
+    
+    //Candidatures
+    Route::get('/candidatures', [CandidaturesController::class , 'index' ])->name('admin.professeur.candidatures.index');
+    Route::get('/consulter', [CandidaturesController::class , 'show' ])->name('admin.professeur.candidatures.candidature');
+});

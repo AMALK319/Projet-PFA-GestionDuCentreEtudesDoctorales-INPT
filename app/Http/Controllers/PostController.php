@@ -13,7 +13,7 @@ class PostController extends Controller
     public function index()
     {
         $dashboard = 'Acceuil' ;
-        return view('admin.professeur.welcome', ['title1' => $dashboard]);
+        return view('admin.professeur.welcome', ['title' => $dashboard]);
     }
     public function showFormations()
     {
@@ -27,17 +27,24 @@ class PostController extends Controller
     }
     public function showSujets()
     {
-
-        return view('admin.professeur.sujets_proposés.index');
+        $sujets = 'Sujets proposés';
+        return view('admin.professeur.sujets_proposés.index', ['title' => $sujets]);
     }
     public function showCandidatures()
     {
-
-        return view('admin.professeur.candidatures.index');
+        $candidatures = 'Candidatures';
+        return view('admin.professeur.candidatures.index' ,  ['title' => $candidatures]);
     }
     public function showCompte()
     {
-       
-        return view('admin.professeur.compte');
+        $compte = 'Mon Compte';
+        return view('admin.professeur.compte', ['title' => $compte]);
     }
+
+    public function candidature()
+    {
+        $candidatures = 'Candidatures';
+        return view(' admin.professeur.candidatures.candidature',  ['title' => $candidatures]);
+    }
+   
 }
