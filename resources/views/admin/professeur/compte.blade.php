@@ -18,9 +18,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mt-3">
 
-                </div>
             </div>
             <div class="col-md-8">
                 <div class="card mb-3">
@@ -88,26 +86,31 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <form>
+                    <form>
+                        <div class="modal-body">
+
                             <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Taper le mot de passe actuel :</label>
-                                <input type="password" class="form-control" id="recipient-name" required>
+                                <label for="current-password" class="champ col-form-label">Taper le mot de passe actuel :</label>
+                                <input type="password" class="form-control" id="current-password" autocomplete="current-password" required>
+                                <p style="display: none; color:red" id="erreur">Vous n'avez pas bien rempli le champ</p>
                             </div>
                             <div class="form-group">
-                                <label for="file" class="col-form-label">Tapez le nouveau mot de passe :</label>
-                                <input type="password" class="form-control" id="file" required>
+                                <label for="new-password" class="champ col-form-label">Tapez le nouveau mot de passe :</label>
+                                <input type="password" class="form-control" id="new-password" autocomplete="new-password" required>
+                                <p style="display: none; color:red" id="erreur">Vous n'avez pas bien rempli le champ</p>
                             </div>
                             <div class="form-group">
-                                <label for="file" class="col-form-label">Retapez le nouveau mot de passe :</label>
-                                <input type="password" class="form-control" id="file" required>
+                                <label for="new-password-confirm" class="champ col-form-label">Retapez le nouveau mot de passe :</label>
+                                <input type="password" class="form-control" id="new-password-confirm" required>
+                                <p style="display: none; color:red" id="erreur">Vous n'avez pas bien rempli le champ</p>
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Enregistrer</button>
-                    </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="reset" class="btn btn-secondary pull-left">Cancel</button>
+                            <button type="submit" id="envoi" class="btn btn-primary" >Enregistrer</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -124,6 +127,71 @@
 
 
 @section('scripts')
+<script>
+    $(document).ready(function() {
+
+        var $cur_mdp = $('#current-password'),
+            $mdp = $('#new-password'),
+            $confirmation = $('#new-password-confirm'),
+            $envoi = $('#envoi'),
+            $erreur = $('#erreur'),
+            $champ = $('.champ');
+
+        /* $champ.keyup(function() {
+            if ($(this).val().length < 5) { // si la chaîne de caractères est inférieure à 5
+                $(this).css({ // on rend le champ rouge
+                    borderColor: 'red',
+                    color: 'red'
+                });
+            } else {
+                $(this).css({ // si tout est bon, on le rend vert
+                    borderColor: 'green',
+                    color: 'green'
+                });
+            }
+        }); */
+
+        $confirmation.keyup(function() {
+            if ($(this).val() != $mdp.val()) { // si la confirmation est différente du mot de passe
+                $(this).css({ // on rend le champ rouge
+                    borderColor: 'red',
+                    color: 'red'
+                });
+            } else {
+                $(this).css({ // si tout est bon, on le rend vert
+                    borderColor: 'green',
+                    color: 'green'
+                });
+            }
+        });
+
+        $reset.click(function() {
+            $champ.css({ // on remet le style des champs comme on l'avait défini dans le style CSS
+                borderColor: '#ccc',
+                color: '#555'
+            });
+           
+        });
+
+        $envoi.click(function(e) {
+            e.preventDefault();
+            verifier($cur_mdp);
+            verifier($mdp);
+            verifier($confirmation);
+            
+        });
+
+        function verifier(champ) {
+            if (champ.val() == "") { // si le champ est vide
+                champ.css({ // on rend le champ rouge
+                    borderColor: 'red',
+                    color: 'red'
+                });
+            }
+        }
+
+    });
+</script>
 
 @endsection
 
@@ -133,11 +201,12 @@
         background-color: #037CC2;
         border-color: #037CC2;
     }
-    .add {
-      margin: auto;
-      width: 200px; 
-      border-radius: 100px;
 
-   }
+    .add {
+        margin: auto;
+        width: 200px;
+        border-radius: 100px;
+
+    }
 </style>
 @endsection
