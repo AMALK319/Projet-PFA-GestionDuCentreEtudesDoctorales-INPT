@@ -32,5 +32,5 @@ Route::group( [],function(){
     
     //Sujets
     Route::get('/chef_equipe/sujets', [CE_SujetsController::class , 'showSujets' ])->name('admin.chef_equipe.sujets.index');
-   
+    //Route::get('/chef_equipe/sujets', [CE_SujetsController::class , 'showSujets' ])->name('admin.chef_equipe.sujets.index');
 });
