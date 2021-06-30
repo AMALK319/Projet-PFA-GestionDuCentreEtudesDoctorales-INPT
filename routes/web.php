@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CandidaturesController;
+use App\Http\Controllers\CE_CandidaturesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,10 @@ Route::group( [],function(){
     //Candidatures
     Route::get('/candidatures', [CandidaturesController::class , 'index' ])->name('admin.professeur.candidatures.index');
     Route::get('/consulter', [CandidaturesController::class , 'show' ])->name('admin.professeur.candidatures.candidature');
+});
+
+Route::group( [],function(){
+    //Candidatures
+    Route::get('/chef_equipe/candidatures', [CE_CandidaturesController::class , 'index' ])->name('admin.chef_equipe.candidatures.index');
+    
 });
