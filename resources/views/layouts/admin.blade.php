@@ -43,15 +43,12 @@
             color: #04649C;
             background-color: #04649C;
             border-color: #04649C;
-
         }
-
         .sidebar .logo {
             padding: 40px 20px;
             border-bottom: 1px solid #444;
             transition: all .3s;
         }
-
         .sidebar .logo a {
             display: inline-block;
             width: 172px;
@@ -60,21 +57,15 @@
             border: 0;
             text-indent: -999999px;
         }
-
-
         .app {
             background-color: white
         }
-
         .titre {
             text-align: center;
             margin-left: auto;
             margin-right: auto;
             width: 100;
         }
-
-
-
         .styled {
             border: 0;
             line-height: 2.5;
@@ -92,16 +83,13 @@
             box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
                 inset -2px -2px 3px rgba(0, 0, 0, .6);
         }
-
         .styled:hover {
             background-color: #04649C;
         }
-
         .styled:active {
             box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
         }
-
         .fa {
             vertical-align: middle;
         }
@@ -158,7 +146,6 @@
 
     </div>
     <script>
-
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
