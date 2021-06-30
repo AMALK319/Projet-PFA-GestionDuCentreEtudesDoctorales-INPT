@@ -12,17 +12,25 @@ class PostController extends Controller
 
     public function index()
     {
+        $role = 'Professeur';
         $dashboard = 'Acceuil' ;
-        return view('admin.professeur.welcome', ['title' => $dashboard]);
+        return view('admin.professeur.welcome', [
+            'title' => $dashboard,
+            'role' => $role,
+        ]);
     }
     public function showFormations()
     {
+        $role = 'Professeur';
         $formations = 'Formations proposées';
-        return view('admin.professeur.formations_proposées.index' , ['title' => $formations]);
+        return view('admin.professeur.formations_proposées.index' , [
+            'title' => $formations,
+            'role' => $role,
+        ]);
     }
     public function showParticipants()
     {
-
+        $role = 'Professeur';
         return view('admin.professeur.participants.index');
     }
     public function showSujets()
@@ -37,8 +45,12 @@ class PostController extends Controller
     }
     public function showCompte()
     {
+        $role = 'Professeur';
         $compte = 'Mon Compte';
-        return view('admin.professeur.compte', ['title' => $compte]);
+        return view('admin.professeur.compte', [
+            'title' => $compte,
+            'role' => $role,
+        ]);
     }
 
     public function candidature()

@@ -1,7 +1,7 @@
 <div class="sidebar" style="background-color: #04649C;">
 
     <div class="title">
-        <h3 style="padding-top: 10px ; padding-bottom: 11px ; padding-left: 0px ;text-align: center; "> Professeur</h3>
+        <h3 style="padding-top: 10px ; padding-bottom: 11px ; padding-left: 0px ;text-align: center; "> {{ $role }}</h3>
 
     </div>
 

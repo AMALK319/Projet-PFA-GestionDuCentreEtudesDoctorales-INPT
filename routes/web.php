@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CandidaturesController;
 use App\Http\Controllers\CE_SujetsController;
+use App\Http\Controllers\CE_CandidaturesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,4 +34,7 @@ Route::group( [],function(){
     //Sujets
     Route::get('/chef_equipe/sujets', [CE_SujetsController::class , 'showSujets' ])->name('admin.chef_equipe.sujets.index');
    
+    //Candidatures
+    Route::get('/chef_equipe/candidatures', [CE_CandidaturesController::class , 'index' ])->name('admin.chef_equipe.candidatures.index');
+    
 });
