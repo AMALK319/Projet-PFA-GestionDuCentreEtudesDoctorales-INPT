@@ -14,4 +14,8 @@ class CandidatController extends Controller
         return view('candidat.auth.index');
     }
    
+    public function showInfos()
+    { 
+        return view('candidat.infos_candidatures');
+    }
 }

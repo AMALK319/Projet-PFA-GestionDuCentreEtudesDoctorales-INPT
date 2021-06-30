@@ -43,4 +43,5 @@ Route::group( [],function(){
 
 
 Route::get('/candidat/connexion', [CandidatController::class , 'index' ])->name('candidat.auth.index'); 
+Route::get('/candidat/infos', [CandidatController::class , 'showInfos' ])->name('candidat.infos_candidatures');
        
