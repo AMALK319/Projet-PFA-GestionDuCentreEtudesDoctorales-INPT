@@ -33,8 +33,12 @@ Route::group( [],function(){
     
     //Sujets
     Route::get('/chef_equipe/sujets', [CE_SujetsController::class , 'showSujets' ])->name('admin.chef_equipe.sujets.index');
+<<<<<<< HEAD
    
     //Candidatures
     Route::get('/chef_equipe/candidatures', [CE_CandidaturesController::class , 'index' ])->name('admin.chef_equipe.candidatures.index');
     
+=======
+    //Route::get('/chef_equipe/sujets', [CE_SujetsController::class , 'showSujets' ])->name('admin.chef_equipe.sujets.index');
+>>>>>>> Sujets_Chef_Equipe
 });
