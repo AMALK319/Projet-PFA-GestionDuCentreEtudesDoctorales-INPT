@@ -4,6 +4,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CandidaturesController;
 use App\Http\Controllers\CE_SujetsController;
 use App\Http\Controllers\CE_CandidaturesController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,3 +40,5 @@ Route::group( [],function(){
     
     //Route::get('/chef_equipe/sujets', [CE_SujetsController::class , 'showSujets' ])->name('admin.chef_equipe.sujets.index');
 });
+
+Route::get('/a', [TestController::class , 'index' ])->name('candidat.index');
