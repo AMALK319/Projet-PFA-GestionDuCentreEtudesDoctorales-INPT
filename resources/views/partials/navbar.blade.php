@@ -15,7 +15,11 @@
 </nav>
 
 <style>
+    /* nav{
+        position: fixed;
+    } */
     nav ul {
+        
         padding: 0px;
         margin: 0px;
         list-style-type: none;

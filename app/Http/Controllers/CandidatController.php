@@ -18,4 +18,8 @@ class CandidatController extends Controller
     { 
         return view('candidat.infos_candidatures');
     }
+    public function showMessages()
+    { 
+        return view('candidat.messages');
+    }
 }

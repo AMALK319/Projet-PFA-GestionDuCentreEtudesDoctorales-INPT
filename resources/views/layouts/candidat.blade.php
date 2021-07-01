@@ -21,7 +21,7 @@
         @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 
         * {
-            box-sizing: border-box;
+            /* box-sizing: border-box; */
             margin: 0;
             padding: 0;
         }
@@ -31,7 +31,7 @@
 
 
         footer {
-            position: relative;
+            position: fixed;
             bottom: 0px;
             background-color: #037CC2;
             color: #fff;
@@ -44,52 +44,54 @@
         }
 
         #contenu {
-            min-height: 100%;
+            height: auto;
             position: relative;
         }
 
-        html,
         body {
             height: 100%;
+            overflow: visible;
         }
     </style>
 </head>
 
 <body>
 
-    <div id="contenu">
-
-        <header>
-            @include('partials.navbar')
-        </header>
 
 
+    <header>
+        @include('partials.navbar')
+    </header>
 
 
 
-        <div class="content">
-           
-               
-          
-            @yield("content")
 
+
+    <main>
+        @yield("content")
+    </main>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div>
+            <p class="text-footer"> &copy; 2021 Institut National des Postes et Telecommunications</p>
         </div>
+    </footer>
 
 
 
-
-
-        <footer>
-            <div>
-                <p class="text-footer"> &copy; 2021 Institut National des Postes et Telecommunications</p>
-            </div>
-        </footer>
-    </div>
 
     @yield("scripts")
-   
-    
- 
+
+
+
     <script>
 
     </script>

@@ -89,9 +89,10 @@
 @endsection
 
 @section('styles')
-<style>
+<style scoped>
+   
     .container {
-        position: absolute;
+        position: relative;
         width: 500px;
         min-height: 480px;
         height: auto;
@@ -110,7 +111,7 @@
         display: none;
 
         height: auto;
-        max-height: 320px;
+        /* max-height: 320px; */
         padding: 15% 5%;
         margin-top: 20%;
         background-color: #fff;
@@ -178,7 +179,9 @@
         left: 50%;
         transform: translate(-50%, 0);
         height: 30px;
+       
         display: flex;
+      
 
     }
 
