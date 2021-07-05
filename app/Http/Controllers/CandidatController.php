@@ -22,4 +22,8 @@ class CandidatController extends Controller
     { 
         return view('candidat.messages');
     }
+    public function showPostulation()
+    { 
+        return view('candidat.postulation');
+    }
 }

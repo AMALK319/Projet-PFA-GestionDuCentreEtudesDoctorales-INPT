@@ -44,4 +44,5 @@ Route::group( [],function(){
 
 Route::get('/candidat/connexion', [CandidatController::class , 'index' ])->name('candidat.auth.index'); 
 Route::get('/candidat/infos', [CandidatController::class , 'showInfos' ])->name('candidat.infos_candidatures');
-Route::get('/candidat/messages', [CandidatController::class , 'showMessages' ])->name('candidat.messages');       
+Route::get('/candidat/messages', [CandidatController::class , 'showMessages' ])->name('candidat.messages');
+Route::get('/candidat/postulation1', [CandidatController::class , 'showPostulation' ])->name('candidat.postulation');              

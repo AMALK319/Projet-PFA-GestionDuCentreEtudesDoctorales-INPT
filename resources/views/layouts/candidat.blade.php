@@ -11,11 +11,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.1/css/all.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"> </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!--  <script src="script.js" defer></script> -->
 
-    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
-    <title>Connexion</title>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
+    <title>Cedoc Inpt</title>
     @yield("styles")
     <style>
         @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
@@ -26,12 +31,13 @@
             padding: 0;
         }
 
-
-
+        .container {
+            min-height: 81%;
+        }
 
 
         footer {
-            position: fixed;
+            /*  position: static; */
             bottom: 0px;
             background-color: #037CC2;
             color: #fff;
@@ -40,9 +46,11 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: large;
             height: 40px;
-            margin-bottom: 0;
+            /*  margin-bottom: 0;
+            margin-top: auto; */
         }
 
+        /* 
         #contenu {
             height: auto;
             position: relative;
@@ -51,34 +59,19 @@
         body {
             height: 100%;
             overflow: visible;
-        }
+        } */
     </style>
 </head>
 
-<body>
-
-
-
+<body class="header-fixed footer-fixed">
     <header>
         @include('partials.navbar')
     </header>
-
-
-
-
-
-    <main>
-        @yield("content")
-    </main>
-
-
-
-
-
-
-
-
-
+    <div class="container">
+        <main>
+            @yield("content")
+        </main>
+    </div>
     <footer>
         <div>
             <p class="text-footer"> &copy; 2021 Institut National des Postes et Telecommunications</p>
