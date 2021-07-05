@@ -1,7 +1,7 @@
 @extends('layouts.candidat')
 
 @section('content')
-@include('partials.miniNavbar')
+@include('partials.navbar2')
 <div class="titre">
 
     <h1>Candidature</h1>
@@ -42,14 +42,14 @@
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Saisir votre Nom</label>
-                                <input type="text" id="nom" name="nom" class="form-control" required>
+                                <input type="text" id="nom" name="nom" class="form-control  fc  " required>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Saisir Votre Prenom</label>
-                                <input type="text" id="prenom" name="prenom" class="form-control" required>
+                                <input type="text" id="prenom" name="prenom" class="form-control  fc  " required>
                             </div>
                         </div>
                     </div>
@@ -59,14 +59,14 @@
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Saisir Votre Email</label>
-                                <input type="email" id="email" class="form-control" required>
+                                <input type="email" id="email" class="form-control  fc" required>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Telephone</label>
-                                <input type="tel" id="tele" class="form-control" required>
+                                <input type="tel" id="tele" class="form-control  fc" required>
                             </div>
                         </div>
                     </div>
@@ -75,13 +75,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Date de Naissance</label>
-                                <input type="date" id="date" name="date" class="form-control" required>
+                                <input type="date" id="date" name="date" class="form-control  fc" required>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Lieu de Naissance</label>
-                                <input type="text" id="lieu" name="lieu" class="form-control" required>
+                                <input type="text" id="lieu" name="lieu" class="form-control  fc" required>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Nationalité</label>
-                                <select id="natio" class="form-control">
+                                <select id="natio" class="form-control  fc">
                                     <option selected>Marocaine</option>
                                     <option>...</option>
                                 </select>
@@ -157,7 +157,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Mention Bac</label>
-                                <select id="mention" class=" form-control">
+                                <select id="mention" class=" form-control  fc">
                                     <option selected>Excellent</option>
                                     <option>Très Bien</option>
                                     <option>Bien</option>
@@ -169,7 +169,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Type d'établissement</label>
-                                <select id="etab" class="form-control">
+                                <select id="etab" class="form-control  fc">
                                     <option selected>Ecole</option>
                                     <option>Faculté</option>
 
@@ -204,7 +204,7 @@
                             <div class="form-group">
 
                                 <label class="lab">Mention du diplome</label>
-                                <select id="mention" class="form-control">
+                                <select id="mention" class="form-control  fc">
                                     <option selected>Excellent</option>
                                     <option>Très Bien</option>
                                     <option>Bien</option>
@@ -219,13 +219,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Specialité</label>
-                                <textarea id="specialite" name="specialite" type="text-area" class="form-control" required></textarea>
+                                <textarea id="specialite" name="specialite" type="text-area" class="form-control  fc" required></textarea>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label class="lab">Intitulé du PFE</label>
-                                <textarea type="text-area" id="pfe" name="pfe" class="form-control" required></textarea>
+                                <textarea type="text-area" id="pfe" name="pfe" class="form-control  fc" required></textarea>
                             </div>
                         </div>
                     </div>
@@ -236,14 +236,14 @@
                             <label class="lab">Choix 1</label>
                             <div class="row">
                                 <div class="col">
-                                    <select id="inputChoiceTeam1" class="form-control">
+                                    <select id="inputChoiceTeam1" class="form-control  fc">
                                         <option selected>Sélectionner équipe</option>
                                         <option>...</option>
                                         <option>...</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <select id="inputChoiceSubject1" class="form-control">
+                                    <select id="inputChoiceSubject1" class="form-control  fc">
                                         <option selected>Sélectionner sujet</option>
                                         <option>...</option>
                                     </select>
@@ -258,14 +258,14 @@
                             <label class="lab">Choix 2</label>
                             <div class="row">
                                 <div class="col">
-                                    <select id="inputChoiceTeam2" class="form-control">
+                                    <select id="inputChoiceTeam2" class="form-control  fc">
                                         <option selected>Sélectionner équipe</option>
                                         <option>...</option>
                                         <option>...</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <select id="inputChoiceSubject2" class="form-control">
+                                    <select id="inputChoiceSubject2" class="form-control  fc">
                                         <option selected>Sélectionner sujet</option>
                                         <option>...</option>
                                     </select>
@@ -279,14 +279,14 @@
                             <label class="lab">Choix 3</label>
                             <div class="row">
                                 <div class="col">
-                                    <select id="inputChoiceTeam3" class="form-control">
+                                    <select id="inputChoiceTeam3" class="form-control  fc">
                                         <option selected>Sélectionner équipe</option>
                                         <option>...</option>
                                         <option>...</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <select id="inputChoiceSubject3" class="form-control">
+                                    <select id="inputChoiceSubject3" class="form-control  fc">
                                         <option selected>Sélectionner sujet</option>
                                         <option>...</option>
                                     </select>
@@ -419,6 +419,10 @@
         });
 
         navigateTo(0);
+        $('.search').hover(function() {
+            $('.sb').css('display', 'none');
+
+        });
 
 
     })
@@ -429,7 +433,7 @@
 @endsection
 
 @section('styles')
-<style>
+<style scoped>
     * {
         margin: 0;
         padding: 0;
@@ -467,11 +471,12 @@
         display: block;
     }
 
-    .form-control {
+    .fc {
         border-radius: 50px;
         box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
         padding-left: 20px;
         font-family: Arial, Helvetica, sans-serif;
+
 
     }
 
@@ -542,6 +547,7 @@
     .select {
         border-radius: 30px;
     }
+    
 </style>
 
 @endsection

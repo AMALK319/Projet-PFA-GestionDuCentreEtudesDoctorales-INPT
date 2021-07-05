@@ -20,6 +20,12 @@
 
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
     <title>Cedoc Inpt</title>
     @yield("styles")
     <style>
@@ -50,14 +56,40 @@
             margin-top: auto; */
         }
 
-        /* 
-        #contenu {
-            height: auto;
-            position: relative;
+        #back2Top {
+            width: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            z-index: 999;
+            display: none;
+            cursor: pointer;
+            -moz-transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -o-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+            position: fixed;
+            bottom: 50px;
+            right: 0;
+            background-color: #DDD;
+            color: #555;
+            text-align: center;
+            font-size: 30px;
+            text-decoration: none;
         }
 
-        body {
-            height: 100%;
+        #back2Top:hover {
+            background-color: #DDF;
+            color: #000;
+        }
+
+        /*  #contenu {
+            height: auto;
+            position: relative;
+        } */
+
+        /* body {
+            
             overflow: visible;
         } */
     </style>
@@ -73,6 +105,7 @@
         </main>
     </div>
     <footer>
+        <a id="back2Top" title="Back to top" href="#">&#10148;</a>
         <div>
             <p class="text-footer"> &copy; 2021 Institut National des Postes et Telecommunications</p>
         </div>
@@ -86,7 +119,26 @@
 
 
     <script>
+        /*Scroll to top when arrow up clicked BEGIN*/
+        $(window).scroll(function() {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $('#back2Top').fadeIn();
+            } else {
+                $('#back2Top').fadeOut();
+            }
+        });
+        $(document).ready(function() {
+            $("#back2Top").click(function(event) {
+                event.preventDefault();
+                $("html, body").animate({
+                    scrollTop: 0
+                }, "slow");
+                return false;
+            });
 
+        });
+        /*Scroll to top when arrow up clicked END*/
     </script>
 
 </body>

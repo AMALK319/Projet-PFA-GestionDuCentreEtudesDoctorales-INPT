@@ -3,7 +3,7 @@
     <img id="logoCedoc" src="../assets/logo.png" alt="logoCedoc"/><img id="logoInpt" src="C:\Users\Perfect\Desktop\logoInpt.png" alt="logoInpt" align="right" />
 
 </div>
-<nav>
+<nav class="">
     <ul>
         <li><a href="#">Structure</a></li><!-- 
         --><li><a href="#">Equipe de recherche</a></li><!-- 
@@ -14,7 +14,7 @@
     </ul>
 </nav>
 
-<style>
+<style scoped>
     /* nav{
         position: fixed;
     } */

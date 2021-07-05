@@ -1,8 +1,9 @@
 @extends('layouts.candidat')
 
 @section('content')
-@include('partials.miniNavbar')
+@include('partials.navbar2')
 <div class="content">
+    <br>
     <div class="titre">
 
         <h1>Boite de Messages</h1>
