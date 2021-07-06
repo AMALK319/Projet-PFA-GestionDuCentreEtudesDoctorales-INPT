@@ -6,13 +6,17 @@
 <nav class="">
     <ul>
         <li><a href="#">Structure</a></li><!-- 
-        --><li><a href="#">Equipe de recherche</a></li><!-- 
-        --><li><a href="#">Sujets Soutenus</a></li><!--
-        --><li><a href="#">Projets</a></li><!--
-        --><li><a href="#">Publication</a></li><!--
-        --><li><a href="#">Connexion</a></li>
+        --><li class="item"><a href="#">Equipe de recherche</a></li><!-- 
+        --><li class="item"><a href="#">Sujets Soutenus</a></li><!--
+        --><li class="item"><a href="#">Projets</a></li><!--
+        --><li class="item"><a href="#">Publication</a></li><!--
+        --><li class="item"><a href="connexion">Connexion</a></li>
     </ul>
 </nav>
+
+<script>
+   
+</script>
 
 <style scoped>
     /* nav{
@@ -52,4 +56,5 @@
     nav li a:hover {
         color: #037CC2;
     }
+    
 </style>

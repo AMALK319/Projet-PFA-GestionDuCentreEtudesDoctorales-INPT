@@ -15,12 +15,16 @@
          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
             Choisir Un Sujet
          </button>
-         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
             @foreach($sujets as $key => $sujet)
             <li><a class="dropdown-item " href="#">{{ $sujet->titreSujet ?? ''}}</a></li>
-            
+
             @endforeach
-            <li><a class="dropdown-item " href="#">Tous les sujets</a></li>
+            
+            <li>
+                <a class="dropdown-item " href="#">Tous les sujets</a>
+            </li>
+           
          </ul>
       </div>
    </div>
@@ -172,9 +176,9 @@
       margin-left: 15px;
    }
 
-   .dropdown-item{
-      background-color: #DCDCDC;
-      border-color: #DCDCDC;
+   .dropdown-item {
+      background-color: white;
+      border-color: white;
    }
 </style>
 @endsection

@@ -52,7 +52,7 @@
     }
 
     .mini {
-        width: 76%;
+        width: 100%;
         margin: auto;
         max-height: 60px;
         

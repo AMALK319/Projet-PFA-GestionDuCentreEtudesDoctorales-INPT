@@ -22,8 +22,8 @@
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>  
     <!------ Include the above in your HEAD tag ---------->
 
     <title>Cedoc Inpt</title>
@@ -123,11 +123,13 @@
         $(window).scroll(function() {
             var height = $(window).scrollTop();
             if (height > 100) {
-                $('#back2Top').fadeIn();
+                $('#back2Top').show();
             } else {
-                $('#back2Top').fadeOut();
+                $('#back2Top').hide();
             }
         });
+
+        
         $(document).ready(function() {
             $("#back2Top").click(function(event) {
                 event.preventDefault();

@@ -31,17 +31,27 @@ class PostController extends Controller
     public function showParticipants()
     {
         $role = 'Professeur';
-        return view('admin.professeur.participants.index');
+        return view('admin.professeur.participants.index', [
+            'role' => $role,
+        ]);
     }
     public function showSujets()
     {
         $sujets = 'Sujets proposés';
-        return view('admin.professeur.sujets_proposés.index', ['title' => $sujets]);
+        $role = 'Professeur';
+        return view('admin.professeur.sujets_proposés.index', [
+            'title' => $sujets,
+            'role' => $role,
+        ]);
     }
     public function showCandidatures()
     {
         $candidatures = 'Candidatures';
-        return view('admin.professeur.candidatures.index' ,  ['title' => $candidatures]);
+        $role = 'Professeur';
+        return view('admin.professeur.candidatures.index' ,  [
+            'title' => $candidatures,
+            'role' => $role,
+        ]);
     }
     public function showCompte()
     {

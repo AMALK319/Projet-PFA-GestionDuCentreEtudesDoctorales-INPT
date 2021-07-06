@@ -88,11 +88,12 @@
                 </a>
             </li>
             <li class="nav-item">
+
                 <a href="#" class="nav-link" id="openModalLink">
                     <i class="nav-icon fas fa-fw fa-sign-out-alt">
 
                     </i>
-                    Deconnexion
+                   Deconnexion
                 </a>
             </li>
 
@@ -104,39 +105,9 @@
 
     <!-- <button class="sidebar-minimizer brand-minimizer" type="button"></button> -->
 </div>
-<!-- Modal deconnexion -->
-<!-- <div id="myModale" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content" id="#modal_content_modify">
-            <div class="modal-header">
-                <h5 class="modal-title">Deconnexion</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="deconnexion">Voulez-Vous Se Deconnecter ?</p>
-            </div>
-            <div class="modal-footer">
-                <button id="closeModalBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger">Se deconnecter</button>
-            </div>
 
-        </div>
-    </div>
-</div> -->
 <script>
-    let modal = null;
-
-   /*  const openModal = function(e) {
-        e.preventDefault()
-        const target = document.querySelector(e.target.getAttribute('href'))‏
-        target.style.display = null;
-        /* target.removeAttribute('aria-hidden') ‏
-        target.setAttribute('aria-modal', 'true')
-        modal = target;
-        modal.addEventListener('click', closeModal)
-        modal.querySelector('').addEventListener('click', closeModal)‏‏
-        document.querySelectorAll('modal-dialog').forEach(a =>‏ { a.add.EventListener('click' ,openModal)})‏
-    }; */
+   
 </script>
 
 
@@ -150,10 +121,5 @@
         margin-left: 35%;
     }
 
-    .deconnexion {
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: bold;
-        color: rgb(189, 141, 141);
-        margin: auto;
-    }
+    
 </style>

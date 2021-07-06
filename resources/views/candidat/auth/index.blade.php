@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container2">
 
     <div class="tab-body" data-id="connexion">
         <form>
@@ -16,7 +16,7 @@
                 <input placeholder="Entrer un mot de passe" type="password" class="input">
             </div>
             <a href="#" class="link">Mot de passe oublié ?</a>
-            <button class="btn" type="button">Connexion</button>
+            <a href="postulation"><button class="btn" type="button">Connexion</button></a>
         </form>
     </div>
 
@@ -37,7 +37,7 @@
                 <input type="password" class="input" placeholder="Confirmer le mot de passe">
 
             </div>
-            <button class="btn" type="button">Inscription</button>
+            <a href="connexion"><button class="btn" type="button">Inscription</button></a>
 
         </form>
     </div>
@@ -46,8 +46,9 @@
         <a class="tab-link active" data-ref="connexion" href="javascript:void(0)">Connexion</a>
         <a class="tab-link" data-ref="inscription" href="javascript:void(0)">Inscription</a>
     </div>
+
 </div>
-</div>
+
 
 @endsection
 
@@ -90,13 +91,12 @@
 
 @section('styles')
 <style scoped>
-   
-    .container {
+    .container2 {
         position: relative;
         width: 500px;
-        min-height: 480px;
-        height: auto;
-        max-height: 500px;
+       /*  min-height: 480px; */
+        min-height: 80%;
+       /*  max-height: 500px; */
         background-color: #D1E4F8;
         padding: 15px 25px;
         border-radius: 10px;
@@ -104,6 +104,8 @@
         margin-top: 25px;
         margin-left: 30%;
         font-family: "Quicksand", sans-serif;
+        margin-bottom: 4%;
+       
     }
 
     .tab-body {
@@ -113,7 +115,7 @@
         height: auto;
         /* max-height: 320px; */
         padding: 15% 5%;
-        margin-top: 20%;
+        margin-top: 5%;
         background-color: #fff;
         color: #82ade6de;
         box-shadow: 0px 5px 10px #7c8395;
@@ -174,14 +176,16 @@
     }
 
     .tab-footer {
-        position: absolute;
+        position: relative;
         bottom: 1%;
-        left: 50%;
+        left: 70%;
         transform: translate(-50%, 0);
-        height: 30px;
-       
+        /* height: 30px; */
+        padding-top: 8%;
+        padding-bottom: 4%;
         display: flex;
-      
+        
+
 
     }
 
@@ -201,10 +205,15 @@
         font-size: x-large;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
-
+.far{
+    vertical-align: middle;
+}
+.fas{
+    vertical-align: middle;
+}
     @media screen and (max-width: 520px) {
         .container {
-            width: 80%;
+            width: 100%;
             min-width: 380px;
             min-height: 490px;
         }

@@ -45,7 +45,7 @@
             border-color: #04649C;
         }
 
-        
+
 
         .sidebar .logo {
             padding: 40px 20px;
@@ -61,15 +61,13 @@
             border: 0;
             text-indent: -999999px;
         }
-        .app {
-            background-color: white
-        }
-
 
         .app {
             background-color: white
         }
 
+
+      
         .titre {
             text-align: center;
             margin-left: auto;
@@ -96,11 +94,12 @@
             box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
                 inset -2px -2px 3px rgba(0, 0, 0, .6);
         }
+
         .styled:hover {
             background-color: #04649C;
         }
 
-        
+
 
         .styled:active {
             box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
@@ -109,6 +108,13 @@
 
         .fa {
             vertical-align: middle;
+        }
+
+        .deconnexion {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: rgb(189, 141, 141);
+            margin: auto;
         }
     </style>
 
@@ -157,6 +163,7 @@
                 </div>
 
                 @yield('content')
+               
             </main>
         </div>
 
@@ -182,10 +189,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src=" https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
 
-    
+
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
-    
+
     <script src="{{ asset('js/app.js') }}"></script>
 
 
