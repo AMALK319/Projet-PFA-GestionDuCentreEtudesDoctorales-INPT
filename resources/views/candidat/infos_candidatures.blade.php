@@ -70,9 +70,10 @@
             </table>
             <br>
             <div class="blue-btn">
-            <a  href=""><button type="button" class="btn btn-primary"></button>Postuler</a>
-                
+                <a class="first-link" href="postulation">
+                    Postuler</a>
             </div>
+
             <br>
         </div>
         <div align="left">
@@ -192,7 +193,7 @@
 
     }
 
-    svg{
+    svg {
         vertical-align: middle;
     }
 
@@ -201,12 +202,12 @@
         color: #037CC2;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: large;
-       
+
         /* border-left: 3px solid #037CC2;*/
 
     }
 
-    .consult{
+    .consult {
         text-decoration: underline;
     }
 
